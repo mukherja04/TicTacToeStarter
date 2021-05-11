@@ -24,7 +24,14 @@ public class TicTacToe {
 	    
 	    
 	   
-	    // Create getter methods for board and turn
+	    /**
+	     * Getter method for current turn number
+	     * @return number of turns taken
+	     */
+	    
+	    public int getTurn() {
+	    	
+	    }
 	    
 	    
 	    
