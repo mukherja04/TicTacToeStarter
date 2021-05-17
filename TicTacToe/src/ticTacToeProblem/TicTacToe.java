@@ -98,7 +98,19 @@ public class TicTacToe {
 	   
 	   public boolean checkRow()
 	   {
-	   
+		   for (String[] row : board) {
+			   String checker = row[0];
+			   int count = 0;
+			   for (String box : row) {
+				   if (box.equals(checker)) {
+					   count++;
+				   }
+			   }
+			   if (count == 3) {
+				   return true;
+			   }
+		   }
+		   return false;
 	   }
 	   
 	   
@@ -110,7 +122,19 @@ public class TicTacToe {
 	   
 	   public boolean checkCol()
 	   {
-	          
+		   for (int c = 0; c < board[0].length; c++) {
+			   String checker = board[0][c];
+			   int count = 0;
+			   for (int r = 0; r < board.length; r++) {
+				   if (board[r][c].equals(checker)) {
+					   count++;
+				   }
+			   }
+			   if (count == 3) {
+				   return true;
+			   }
+		   }
+		   return false;
 	   }
 	   
 	   
