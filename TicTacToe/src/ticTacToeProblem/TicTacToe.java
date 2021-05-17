@@ -19,7 +19,15 @@ public class TicTacToe {
 	     */
 	    
 	    public TicTacToe() {
-	      
+	    	board = new String[3][3];
+	    	
+	    	for (int r = 0; r < board.length; r++) {
+	    		for (int c = 0; c < board[0].length; c++) {
+	    			board[r][c] = "-";
+	    		}
+	    	}
+	    	
+	    	turn = 0;
 	    }
 	    
 	    
