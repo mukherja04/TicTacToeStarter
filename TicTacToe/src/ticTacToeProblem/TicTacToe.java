@@ -38,7 +38,7 @@ public class TicTacToe {
 	     */
 	    
 	    public int getTurn() {
-	    	
+	    	return turn;
 	    }
 	    
 	    
@@ -50,7 +50,12 @@ public class TicTacToe {
 	    
 	   public void printBoard()
 	   {
-	       
+	       for (String[] row : board) {
+	    	   for (String box : row) {
+	    		   System.out.print(box);
+	    	   }
+	    	   System.out.println();
+	       }
 	       
 	   }
 	   
