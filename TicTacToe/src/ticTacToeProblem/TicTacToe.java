@@ -146,7 +146,29 @@ public class TicTacToe {
 	   
 	   public boolean checkDiag()
 	   {
-
+		   int count = 0;
+		   String checker = board[0][0];
+		   for (int x = 0; x < board.length; x++) {
+			   if (board[x][x].equals(checker)) {
+				   count++;
+			   }
+		   }
+		   if (count == 3) {
+			   return true;
+		   }
+		   
+		   count = 0;
+		   
+		   String checker = board[0][board[0].length-1];
+		   for (int x = 0; x < board.length; x++) {
+			   if (board[x][board[0].length-1-x].equals(checker)) {
+				   count++;
+			   }
+		   }
+		   if (count == 3) {
+			   return true;
+		   }
+		   return false;
 	   }
 	   
 	   /**
@@ -156,7 +178,10 @@ public class TicTacToe {
 	    */
 	   public boolean checkWin()
 	   {
-	       
+	       if (checkRow() || checkCol() || checkDiag()) {
+	    	   return true;
+	       }
+	       return false;
 	   }
 
 }
