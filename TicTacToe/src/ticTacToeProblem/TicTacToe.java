@@ -68,7 +68,10 @@ public class TicTacToe {
 	   
 	   public boolean pickLocation(int row, int col)
 	   {
-	        
+	        if (board[row][col].equals("-")) {
+	        	return true;
+	        }
+	        return false;
 	   }
 	   
 	   /**
@@ -78,7 +81,12 @@ public class TicTacToe {
 	   
 	   public void takeTurn(int row, int col)
 	   {
-	      
+		   if (turn%2 == 0) {
+			   board[row][col] = "X";
+		   }
+		   else {
+			   board[row][col] = "O";
+		   }
 	   }
 	   
 	   /**
