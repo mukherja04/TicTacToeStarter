@@ -87,6 +87,7 @@ public class TicTacToe {
 		   else {
 			   board[row][col] = "O";
 		   }
+		   turn++;
 	   }
 	   
 	   /**
