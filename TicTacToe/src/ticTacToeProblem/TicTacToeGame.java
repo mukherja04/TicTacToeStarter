@@ -52,10 +52,10 @@ public class TicTacToeGame
     }
     
     public static int getInt(Scanner in) {
-        int num = in.nextInt();
+        int num = input.nextInt();
         while (num > 2 || num < 0) {
             System.out.print("Only enter a number between 0-2:  ");
-            num = in.nextInt();
+            num = input.nextInt();
         }
         return num;
     }
